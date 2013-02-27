@@ -17,7 +17,12 @@
       placeholder="Reason for scoring a {{workshop.score || 0}}">
     </textarea>
 
+    <checkhuman valid="client.isHuman"></checkhuman> <br/>
+
+    <button ng-disabled="!client.isHuman">Send Feedback</button>
+
     <script src="angular.js"></script>
     <script src="app.js"></script>
+    <script src="check-human.js"></script>
   </body>
 </html>
