@@ -1,9 +1,21 @@
 <html ng-app="app">
   <body>
-    <h1>Feedback</h1>
-    <p ng-show="workshop.score">Workshop Score is: {{workshop.score}}</p>
+    <h1>Feedback 
+      <span ng-show="workshop.attendee">from {{workshop.attendee}}</span>
+    </h1>
     
-    Score: <input type="text" ng-model="workshop.score"></input>
+    Name <br/>
+    <input type="text" ng-model="workshop.attendee"></input><br/>
+
+    Score <br/> 
+    <input type="text" ng-model="workshop.score"></input><br/>
+
+    Feedback <br/>
+    <textarea 
+      ng-model="workshop.feedback" 
+      cols="30" rows="10"
+      placeholder="Reason for scoring a {{workshop.score || 0}}">
+    </textarea>
 
     <script src="angular.js"></script>
     <script src="app.js"></script>
