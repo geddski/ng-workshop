@@ -1,7 +1,10 @@
 <html ng-app="app">
   <body>
     <h1>Feedback</h1>
-    <p>Favorite number is: {{5*2}}</p>
+    <p ng-show="workshop.score">Workshop Score is: {{workshop.score}}</p>
+    
+    Score: <input type="text" ng-model="workshop.score"></input>
+
     <script src="angular.js"></script>
     <script src="app.js"></script>
   </body>
