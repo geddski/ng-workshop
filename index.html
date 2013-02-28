@@ -1,4 +1,7 @@
 <html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="bootstrap.css"></link>
+  </head>
   <body>
     <h1>Feedback 
       <span ng-show="workshop.attendee">from {{workshop.attendee}}</span>
@@ -12,8 +15,7 @@
 
     Feedback <br/>
     <textarea 
-      ng-model="workshop.feedback" 
-      rows="10"
+      ng-model="workshop.feedback"
       placeholder="Reason for scoring a {{workshop.score || 0}}">
     </textarea>
 
