@@ -1,4 +1,4 @@
-angular.module('app').controller('Feedback', function($scope){
+angular.module('app').controller('Feedback', function($scope, $http, $log){
   var keystrokes;
 
   $scope.workshop = {
@@ -6,6 +6,10 @@ angular.module('app').controller('Feedback', function($scope){
   };
 
   $scope.save = function(workshop){
-    alert('Thanks for the ' + workshop.score + '!');
+    $log.info('Thanks for the ' + workshop.score + '!');
+
+    $http.post('http://openwebstack.aws.af.cm/feedback', workshop).success(function(res){
+      console.log('res', res);
+    });
   };
 });
