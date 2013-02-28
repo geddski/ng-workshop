@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="bootstrap.css"></link>
   </head>
-  <body>
+  <body ng-controller="Feedback">
     <h1>Feedback 
       <span ng-show="workshop.attendee">from {{workshop.attendee}}</span>
     </h1>
@@ -23,11 +23,12 @@
 
     <checkhuman valid="client.isHuman"></checkhuman> <br/>
 
-    <button ng-disabled="!client.isHuman">Send Feedback</button> <br/>
+    <button ng-disabled="!client.isHuman" ng-click="save(workshop)">Send Feedback</button> <br/>
 
     <script src="angular.js"></script>
     <script src="app.js"></script>
     <script src="check-human.js"></script>
     <script src="amazing-filter.js"></script>
+    <script src="feedback.js"></script>
   </body>
 </html>
